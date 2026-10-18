@@ -16,26 +16,30 @@
             padding: 0; 
         }
 
-        /* DISEÑO DE BIENVENIDA REALMENTE RESPONSIVO PARA MÓVIL Y TABLET */
+        /* AQUÍ COMBINAMOS EL FONDO NARANJA CON TU IMAGEN DE CANVA TRANSPARENTE */
         .pantalla-bienvenida {
             width: 100%;
-            min-height: 90vh; /* Ocupa casi toda la pantalla vertical */
-            background-color: #FF6B00; /* Fondo naranja limpio siempre */
+            min-height: 90vh; 
+            background-image: linear-gradient(rgba(255, 107, 0, 0.85), rgba(255, 107, 0, 0.85)), url('fondo-textura.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             padding: 30px 20px 0 20px;
-            text-align: center;
         }
 
+        /* AQUÍ LE INDICAMOS AL TEXTO QUE SE CENTRE AL 100% */
         .bienvenida-tags {
             color: #FFFFFF;
             font-weight: bold;
-            font-size: 0.9em;
+            font-size: 1.2em;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 10px;
+            text-align: center; /* Centrado de texto */
         }
 
         .bienvenida-titulo {
@@ -45,9 +49,9 @@
             line-height: 1.2;
             max-width: 600px;
             margin: 0 auto 20px auto;
+            text-align: center; /* Centrado de texto */
         }
 
-        /* Tu mockup de ObraShift escalará perfecto sin cortarse jamás */
         .contenedor-mockup {
             width: 100%;
             max-width: 280px;
@@ -60,7 +64,6 @@
             display: block;
         }
         
-        /* Contenedor del contenido del blog */
         .container { 
             width: 100%; 
             max-width: 800px; 
@@ -69,8 +72,8 @@
             padding: 30px 20px; 
         }
         
-        h1 { color: #0A2540; font-size: 1.8em; line-height: 1.3; margin-top: 10px; font-weight: 800; }
-        h2 { color: #0A2540; border-bottom: 2px solid #D9E2EC; padding-bottom: 6px; margin-top: 35px; font-size: 1.4em; font-weight: 700; }
+        h1 { color: #0A2540; font-size: 1.8em; line-height: 1.3; margin-top: 10px; font-weight: 800; text-align: center;}
+        h2 { color: #0A2540; border-bottom: 2px solid #D9E2EC; padding-bottom: 6px; margin-top: 35px; font-size: 1.4em; font-weight: 700; text-align: center;}
         h3 { color: #0052FF; font-size: 1.15em; margin-top: 25px; font-weight: 700; }
         p, li { font-size: 1.05em; color: #334E68; }
         
@@ -93,7 +96,6 @@
         ul { padding-left: 20px; }
         li { margin-bottom: 12px; }
 
-        /* AJUSTES DE MAQUETACIÓN AUTOMÁTICA PARA TABLETS Y PANTALLAS GRANDES */
         @media (min-width: 600px) {
             .pantalla-bienvenida { 
                 min-height: 80vh; 
@@ -109,16 +111,14 @@
 </head>
 <body>
 
-<!-- PORTADA DE BIENVENIDA GENERADA POR CÓDIGO (NUNCA SE CORTARÁ) -->
 <div class="pantalla-bienvenida">
     <div>
         <div class="bienvenida-tags">Aplicación para Contratistas</div>
         <div class="bienvenida-titulo">Cómo hacer un presupuesto de obra en 2 minutos desde tu celular</div>
     </div>
     
-    <!-- Aquí colocaremos la pura captura recortada de tu app para que luzca al centro -->
     <div class="contenedor-mockup">
-        <img src="captura-app.jpg" alt="ObraShift App">
+        <img src="captura-app.png" alt="ObraShift App">
     </div>
 </div>
 
