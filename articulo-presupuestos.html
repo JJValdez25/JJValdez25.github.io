@@ -5,23 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cómo hacer un presupuesto de obra que sí deje ganancias</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #F0F4F8; color: #0A2540; line-height: 1.6; margin: 0; padding: 20px; }
-        .container { max-width: 800px; background: #FFFFFF; margin: 40px auto; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h1 { color: #0A2540; font-size: 2.2em; text-align: center; }
-        h2 { color: #0A2540; border-bottom: 2px solid #D9E2EC; padding-bottom: 8px; margin-top: 30px; }
-        h3 { color: #0052FF; }
-        .portada { width: 100%; height: auto; aspect-ratio: 1200/630; object-fit: cover; border-radius: 6px; margin-bottom: 15px; display: block; }
-        .btn-accion { display: block; width: fit-content; background-color: #FF6B00; color: white; text-align: center; padding: 15px 30px; font-weight: bold; font-size: 1.2em; text-decoration: none; border-radius: 6px; margin: 30px auto; box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3); }
-        .btn-accion:hover { background-color: #e05e00; }
-        .resaltado { background-color: #EBF4FF; padding: 15px; border-left: 4px solid #0052FF; margin: 20px 0; border-radius: 0 4px 4px 0; }
+        * { box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: #F0F4F8; 
+            color: #0A2540; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        /* ESTA SECCIÓN LOGRA QUE LA PORTADA OCUPE CASI TODA LA PANTALLA AL ABRIR */
+        .pantalla-bienvenida {
+            width: 100%;
+            height: 85vh; /* Ocupa el 85% de la altura real de cualquier celular o tablet */
+            background-color: #FF6B00; /* Fondo naranja oficial */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .portada-fullscreen {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ajusta la imagen completa de Canva sin recortarla */
+        }
+        
+        /* Contenedor del artículo que aparece abajo al hacer scroll */
+        .container { 
+            width: 100%; 
+            max-width: 800px; 
+            background: #FFFFFF; 
+            margin: 0 auto; 
+            padding: 25px 20px; 
+        }
+        
+        h1 { color: #0A2540; font-size: 1.7em; text-align: left; line-height: 1.3; margin-top: 10px; }
+        h2 { color: #0A2540; border-bottom: 2px solid #D9E2EC; padding-bottom: 6px; margin-top: 30px; font-size: 1.3em; }
+        h3 { color: #0052FF; font-size: 1.1em; margin-top: 21px; }
+        p, li { font-size: 1.05em; color: #334E68; }
+        
+        .btn-accion { 
+            display: block; 
+            width: 100%; 
+            background-color: #FF6B00; 
+            color: white; 
+            text-align: center; 
+            padding: 16px 10px; 
+            font-weight: bold; 
+            font-size: 1.1em; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            margin: 25px 0; 
+            box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3); 
+        }
+        
+        .resaltado { background-color: #EBF4FF; padding: 15px; border-left: 4px solid #0052FF; margin: 15px 0; border-radius: 0 4px 4px 0; }
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
+
+        /* Optimización responsiva para Tablets y Laptops */
+        @media (min-width: 600px) {
+            .pantalla-bienvenida { height: 90vh; padding: 40px; }
+            body { background-color: #F0F4F8; }
+            .container { margin: 30px auto; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+            h1 { font-size: 2.2em; text-align: center; }
+            h2 { font-size: 1.6em; }
+            .btn-accion { width: fit-content; padding: 15px 30px; margin: 30px auto; }
+        }
     </style>
 </head>
 <body>
 
+<!-- PORTADA QUE OCUPA LA PANTALLA PRINCIPAL -->
+<div class="pantalla-bienvenida">
+    <img src="portada-blog.png" alt="Portada ObraShift" class="portada-fullscreen">
+</div>
+
+<!-- TEXTO QUE APARECE ABAJO AL DESLIZAR -->
 <div class="container">
-    <img src="portada-blog.png" alt="Portada ObraShift" class="portada">
     
     <h1>Cómo hacer un presupuesto de obra que sí deje ganancias (y no solo pérdidas)</h1>
     
@@ -64,7 +129,7 @@
         <li><strong>Envío inmediato:</strong> Se genera un formato limpio que puedes enviar al instante por WhatsApp, dándole a tu negocio independiente la seriedad y presentación de una gran empresa constructora.</li>
     </ul>
 
-    <h2>Da el salto hoy mismo: "Presupuesta rápido, cobra seguro"</h2>
+    <h2>Da el salto hoy mismo: <strong>"Presupuesta rápido, cobra seguro"</strong></h2>
     <p>Hacer presupuestos no tiene por qué ser la parte más pesada de tu día. <strong>Tu talento está en las manos</strong> y en resolver los problemas de la obra, no en pelearte con la tecnología o el papeleo manual.</p>
     <p>Descarga la aplicación, lleva el control de tu dinero en el bolsillo y empieza a proteger las ganancias de tu esfuerzo.</p>
 
