@@ -21,17 +21,16 @@
             width: 100%;
             height: 85vh; /* Ocupa el 85% de la altura real de cualquier celular o tablet */
             background-color: #FF6B00; /* Fondo naranja oficial */
-            display: flex;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
+            margin: 0;
             padding: 10px;
         }
 
         .portada-fullscreen {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Ajusta la imagen completa de Canva sin recortarla */
+            object-fit: cover; /* OBLIGA A LA IMAGEN A LLENAR TODA LA PANTALLA SIN DEJAR HUECOS */
+            object-position: center; /* Mantiene el centro de tu diseño de Canva siempre visible */
         }
         
         /* Contenedor del artículo que aparece abajo al hacer scroll */
